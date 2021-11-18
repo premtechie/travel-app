@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Button() {
+function Register() {
     return (
         <div>
-            Button
+            Register
         </div>
     )
 }
 
-export default Button
+export default Register
