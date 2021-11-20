@@ -1,0 +1,158 @@
+@import '../../Styles//Variables/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,500&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+.register-layout{
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    border-radius: 20px;
+    @media(max-width: 580px){
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+.input-wrapper-container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media(max-width:580px){
+        width: 100%;
+    }
+    .card-title{
+        color: $pink-color;
+        font-family: 'Poppins';
+        font-size: 24px;
+        line-height: 29px;
+        width: 324px;
+        text-align: left;
+        margin-bottom: 20px;
+        font-weight: bold;
+        @media(max-width:580px){
+            font-size: 18px;
+            width: 284px;
+            margin-bottom: 10px;
+        }
+    }
+    .card-content {
+        color: #7F8A9C;
+        font-family: 'Open Sans';
+        font-size: 18px;
+        line-height: 26px;
+        width: 324px;
+        text-align: left;
+        font-style: italic;
+        margin-bottom: 30px;
+
+        @media(max-width:580px){
+            font-size: 16px;
+            width: 284px;
+            margin-bottom: 20px;
+        }
+      }
+      .end-container{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @media(max-width:580px){
+            justify-content: end;
+        }
+      }
+      .input-container{
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    .terms-container{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        @media(max-width:580px){
+            margin-bottom: 10px;
+            width: 324px;
+            justify-content: center;
+        }
+        .check{
+            background-color: #FF0066;
+            border-radius: 6px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+
+            @media(max-width:580px){
+                width: 20px;
+                height: 20px;
+            }
+        }
+        .terms{
+            margin-left: 10px;
+            color: $gray-color;
+             
+            @media(max-width:580px){
+                font-size: 14px;
+            }
+            a{
+                color: $pink-color;
+                text-decoration: none;
+                cursor: pointer;
+                font-weight: 500;
+            }
+
+        }
+    }
+    .button-container{
+        background-image: linear-gradient(135deg, #2B2ECF 0%, #652BCF 100%);
+        border-radius: 30px;
+        width: 324px;
+        height: 60px;
+        border: none;
+        color: $white-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 18px;
+        line-height: 20px;
+        text-align: left;
+        font-weight: bold;
+        padding: 0 20px;
+        font-family: 'Open Sans';
+        cursor: pointer;
+        @media(max-width:580px){
+            height: 50px;
+            width: 284px;
+            background-image: linear-gradient(135deg, #2B2ECF 0%, #652BCF 100%);
+            
+        }
+    }
+
+}
+
+
+.side-wrapper{
+    width: 50%;
+    height: 100%;
+    background-image: url(../../Components//Images/register.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    @media(max-width:580px){
+        width: 100%;
+        box-shadow: 16px -63px 60px -1px rgba(255,249,249,0.89) inset;
+        -webkit-box-shadow: 16px -63px 60px -1px rgba(255,249,249,0.89) inset;
+        -moz-box-shadow: 16px -63px 60px -1px rgba(255,249,249,0.89) inset;
+        height:280px;
+    }
+    .logo{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+}
