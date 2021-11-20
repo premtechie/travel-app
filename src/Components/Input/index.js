@@ -1,10 +1,8 @@
 import React,{useEffect, useState} from 'react'
-import './styles.scss';
-import userIcon from '../Images/icon.svg';
 import greenTickIcon from '../Images/green-tick.svg';
 import wrong from '../Images/wrong-icon.svg';
 import classNames from 'classnames';
-
+import '../../Styles/Components/input.scss';
 
 function Input(props) {
     const {type,icon,value, handler} = props;
@@ -57,8 +55,8 @@ function Input(props) {
 
     return (
         <div className='input-wrapper'>
-            <div className="input-field">
-                <img src={icon} className='user-icon' />
+            <div className={classNames({["warning-field"]:showErrorMsg || nameErrorMsg || emailErrorMsg},"input-field")}>
+                <img src={icon} className='user-icon' alt='icon' />
                 <input value={value} onChange={handler} onBlur={()=>handleErrorState()} className='input' autoComplete="off" placeholder={placeHolderText} type={type}  />
                 {showErrorTick && <img src={wrong} />}
                 {showErrorTick === false && <img src={greenTickIcon} className='green-tick' />}

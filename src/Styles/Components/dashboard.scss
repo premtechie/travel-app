@@ -1,0 +1,18 @@
+.dashboard-wrapper{
+    width: 100%;
+    background-color: #E7EDF6;
+    padding: 0 40px;
+    .header-wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header-title{
+            color: #FF0066;
+            font-family: 'Poppins';
+            font-size: 36px;
+            line-height: 43px;
+            text-align: left;
+        }
+    }
+}

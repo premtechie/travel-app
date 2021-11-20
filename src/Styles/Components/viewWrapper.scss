@@ -1,0 +1,33 @@
+.view-wrapper{
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .listIcon-container{
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        .icon{
+            filter: invert(81%) sepia(16%) saturate(267%) hue-rotate(177deg) brightness(102%) contrast(89%);
+        }
+    }
+    .selectedListIcon-container{
+        background-color: #2B2ECF;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .icon{
+            filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(121deg) brightness(97%) contrast(103%);
+        }
+    }
+}

@@ -5,15 +5,26 @@ import atIcon from '../../Components/Images/at-icon.svg'
 import arrow from '../../Components/Images/arrow.svg';
 import lock from '../../Components/Images/lock.svg';
 import logo from '../../Components/Images/logo.svg';
-
-import './styles.scss';
+import '../../Styles/Components/register.scss';
 
 function Register() {
 
     const [nameValue,setNameValue] = useState("")
     const [emailValue,setEmailValue] = useState("")
     const [passwordValue,setPasswordValue] = useState("")
-    const [checkValue,setCheckValue] = useState(false)
+    const [checkValue,setCheckValue] = useState(false);
+    const [errorMsg,setErrorMsg] = useState("")
+    function handleSignIn(name,email,password,check){
+        checkValue !== true ? setErrorMsg("Please Confirm Terms and Condition"):setErrorMsg("")
+        if(check && name && email && password){
+            console.log(name,email,password,check)
+        }
+        else{
+            // alert()
+        }
+    }
+
+
     return (
         <div className='register-layout' >
             <div className='input-wrapper-container' >
@@ -23,23 +34,24 @@ function Register() {
                     <Input icon={userIcon} type={"text"} value={nameValue} handler={(e)=>setNameValue(e.target.value)} />
                     <Input icon={atIcon} type={"email"} value={emailValue} handler={(e)=>setEmailValue(e.target.value)} />
                     <Input icon={lock} type={"password"} value={passwordValue} handler={(e)=>setPasswordValue(e.target.value)} />
-                    <div className='terms-container'>
-                        <input type='checkbox' checked={checkValue} onChange={()=>setCheckValue(!checkValue)}  className='check' />
-                        <label className='terms' >I agree to the <a  >Terms</a> and <a >Privacy Policy</a>.</label>
-                    </div>
+                    <label className="container"><div className='terms-text'>I agree to the <a  >Terms</a> and <a >Privacy Policy</a></div>.
+                        <input type="checkbox" checked={checkValue} onChange={()=>setCheckValue(!checkValue)} />
+                        <span className="checkmark"></span>
+                    </label>
+                    {!checkValue &&  <label className='warning-label' >{errorMsg}</label>}
                 </div>
                 <div className='end-container'>
                     <div>
-                        <button className='button-container' onClick={()=>console.log(nameValue,emailValue,passwordValue,checkValue)} >
+                        <button className='button-container' onClick={()=>handleSignIn(nameValue,emailValue,passwordValue,checkValue)} >
                             <div className='btn-text' >{"SIGN UP"}</div>
-                            <img src={arrow} className='arrow' />
+                            <img src={arrow} className='arrow' alt='icon'/>
                         </button>
                     </div>
                 </div>
                 
             </div>
             <div className='side-wrapper'>
-                <img src={logo} className='logo' />
+                <img src={logo} className='logo' alt=''/>
             </div>
         </div>
     )

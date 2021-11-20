@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,500&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+.card{
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 305px;
+    height: 352px;
+    padding:10px;
+
+    .place{
+        background-size: 100%;
+        width: 100%;
+        height: 149px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .label-container{
+        display: flex;
+        padding: 5px 0;
+    }
+    .label{
+        background-color: #F6C937;
+        border-radius: 11.5px;
+        width: max-content;
+        height: 23px;
+        color: #FFFFFF;
+        font-family: sans-serif;
+        font-size: 12px;
+        line-height: 17px;
+        text-align: left;
+        padding: 0px 10px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-right: 10px;
+        font-weight: 600;
+    }
+
+}
