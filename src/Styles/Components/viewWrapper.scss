@@ -6,6 +6,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media(max-width:580px){
+        position: absolute;
+        bottom: -26px;
+        left: 34%;
+    }
     .listIcon-container{
         border-radius: 100%;
         width: 40px;

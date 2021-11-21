@@ -1,18 +1,85 @@
 .dashboard-wrapper{
     width: 100%;
-    background-color: #E7EDF6;
-    padding: 0 40px;
+    padding: 20px 40px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 100px;
+    min-height: 100vh;
+    @media(max-width:580px){
+        margin-left: 0;
+        padding: 0px;
+    }
+    .show-logo{
+        display: none;
+        @media(max-width:580px){
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    }
+    .show-menu{
+        display: none;
+        @media(max-width:580px){
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    }
     .header-wrapper{
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: fixed;
+        background-color: #E7EDF6;
+        top: 0;
+        padding-top: 20px;
+        z-index: 1;
+        left: 0;
+        @media(max-width:580px){
+            background-image: url('../../Components/Images//bg.png');
+            height: 400px;
+            background-position: initial;
+            background-size: cover;
+            width: 100%;
+            -webkit-box-shadow: inset 28px 42px 90px 46px rgba(0,0,0,0.62);
+            -moz-box-shadow: inset 28px 42px 90px 46px rgba(0,0,0,0.62);
+            box-shadow: inset 28px 42px 90px 46px rgba(0,0,0,0.62);
+            position: relative;
+        }
         .header-title{
+            width: 100%;
             color: #FF0066;
             font-family: 'Poppins';
             font-size: 36px;
-            line-height: 43px;
             text-align: left;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 120px;
+            padding-right: 20px;
+            @media(max-width:580px){
+                padding-left: 20px;
+                color: #FFFFFF;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                
+            }
+        }
+    }
+    .card-wrapper{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 80px;
+        overflow-y: scroll;
+        padding-top: 20px;
+        @media(max-width:580px){
+            justify-content: center;
+            margin-top: 20px;
         }
     }
 }

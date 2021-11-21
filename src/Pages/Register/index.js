@@ -7,7 +7,7 @@ import lock from '../../Components/Images/lock.svg';
 import logo from '../../Components/Images/logo.svg';
 import '../../Styles/Components/register.scss';
 
-function Register() {
+function Register(props) {
 
     const [nameValue,setNameValue] = useState("")
     const [emailValue,setEmailValue] = useState("")
@@ -17,10 +17,14 @@ function Register() {
     function handleSignIn(name,email,password,check){
         checkValue !== true ? setErrorMsg("Please Confirm Terms and Condition"):setErrorMsg("")
         if(check && name && email && password){
-            console.log(name,email,password,check)
+            console.log(name,email,password,check,props.history)
+            localStorage.setItem("name",name)
+            localStorage.setItem("email",email)
+            localStorage.setItem("password",password)
+            props.history.push("/home")
         }
         else{
-            // alert()
+            // console.log(this.props.history)
         }
     }
 

@@ -1,12 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,500&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
-
+@import '../Variables//variables.scss';
 .card{
     background-color: #FFFFFF;
     border-radius: 20px;
-    width: 305px;
-    height: 352px;
-    padding:10px;
-
+    width: 265px;
+    // height: max-content;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 0 15px 15px;
+    transition: transform .2s;
+    cursor: pointer;
+    justify-content: space-between;
+    @media(max-width:580px){
+        max-width: 300px;
+    }
+    &:hover{
+        transform: scale(1.04);
+    }
     .place{
         background-size: 100%;
         width: 100%;
@@ -16,7 +28,7 @@
     }
     .label-container{
         display: flex;
-        padding: 5px 0;
+        padding: 10px 0;
     }
     .label{
         background-color: #F6C937;
@@ -35,5 +47,169 @@
         margin-right: 10px;
         font-weight: 600;
     }
-
+    .card-title {
+        color: #2B2ECF;
+        font-family: Poppins;
+        font-size: 24px;
+        line-height: 29px;
+        width: 100%;
+        text-align: left;
+        font-weight: 500;
+        margin-bottom: 10px;
+        display: flex;
+      }
+      .card-content {
+        color: #7F8A9C;
+        font-family: sans-serif;
+        font-size: 18px;
+        line-height: 22px;
+        width: 265px;
+        text-align: left;
+      }
+      .icon-click-wrapper{
+            width: 100%;
+            display: flex;
+            height: 30px;
+            align-items: center;
+            justify-content: end;
+            margin-top: 20px;
+          .icon{
+            width: 22px;
+            height: 22px;
+            margin-right: 15px;
+            cursor: pointer;
+          }
+      }
+      .container {
+        display: flex;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 14px;
+        -webkit-user-select: none;
+        user-select: none;
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        @media(max-width:580px){
+            font-size: 14px;
+            padding-left: 30px;
+        }
+        .terms-text{
+            color: $gray-color;
+            @media(max-width:580px){
+                font-size: 13px;
+            }
+        }
+        a{
+            color: $pink-color;
+        }
+      }
+      
+      /* Hide the browser's default checkbox */
+      .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      
+      /* Create a custom checkbox */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 21px;
+        width: 21px;
+        border:1px solid #FFFFFF;
+        border-radius:50%;
+        @media(max-width: 580px){
+            width: 18px;
+            height: 18px;
+        }
+      }
+                
+      /* When the checkbox is checked, add a blue background */
+      .container input:checked ~ .checkmark {
+        background-color: #37F6B8;
+        border: none;
+      }
+      
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      
+      /* Show the checkmark when checked */
+      .container input:checked ~ .checkmark:after {
+        display: block;
+      }
+      
+      /* Style the checkmark/indicator */
+      .container .checkmark:after {
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        @media(max-width:580px){
+            width: 3px;
+            height: 8px;
+        }
+      }
+}
+.cardSelected{
+    background-image: linear-gradient(135deg, #2B2ECF 0%, #652BCF 100%);
+    position: relative;
+    .card-title {
+        color: #FFFFFF;
+      }
+}
+.cardListView{
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row !important;
+    align-items: center !important;
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    .container{
+        top: 10px;
+        right: 0;
+    }
+    .card-sec{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .card-title{
+        margin-bottom: 0;
+        margin-left: 15px;
+        font-size: 18px;
+    }
+    .place{
+        width: 50px;
+        height: 50px;
+    }
+    .label-container{
+        display: none;
+    }
+    .card-content{
+        display: none;
+    }
+    .icon-click-wrapper{
+        margin-top: 10px;
+        width: max-content;
+    }
 }
