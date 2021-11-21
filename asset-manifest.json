@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/travel-app/static/css/main.ea71fb1c.chunk.css",
+    "main.css": "/travel-app/static/css/main.eed98576.chunk.css",
     "main.js": "/travel-app/static/js/main.5abc900b.chunk.js",
     "main.js.map": "/travel-app/static/js/main.5abc900b.chunk.js.map",
     "runtime-main.js": "/travel-app/static/js/runtime-main.69e632cd.js",
@@ -12,7 +12,7 @@
     "index.html": "/travel-app/index.html",
     "service-worker.js": "/travel-app/service-worker.js",
     "service-worker.js.map": "/travel-app/service-worker.js.map",
-    "static/css/main.ea71fb1c.chunk.css.map": "/travel-app/static/css/main.ea71fb1c.chunk.css.map",
+    "static/css/main.eed98576.chunk.css.map": "/travel-app/static/css/main.eed98576.chunk.css.map",
     "static/js/2.8ea09e5e.chunk.js.LICENSE.txt": "/travel-app/static/js/2.8ea09e5e.chunk.js.LICENSE.txt",
     "static/media/arrow.840ca64b.svg": "/travel-app/static/media/arrow.840ca64b.svg",
     "static/media/at-icon.512dbb18.svg": "/travel-app/static/media/at-icon.512dbb18.svg",
@@ -46,7 +46,7 @@
   "entrypoints": [
     "static/js/runtime-main.69e632cd.js",
     "static/js/2.8ea09e5e.chunk.js",
-    "static/css/main.ea71fb1c.chunk.css",
+    "static/css/main.eed98576.chunk.css",
     "static/js/main.5abc900b.chunk.js"
   ]
 }
